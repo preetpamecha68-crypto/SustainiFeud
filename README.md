@@ -1,6 +1,7 @@
+[README.md](https://github.com/user-attachments/files/33244708/README.md)
 # SUSTAINI-FEUD
 
-A real-time, sustainability-themed game show for Sustainicity. One host runs the show from a laptop/projector and up to **40 participants** join from their phones using a 5-character room code.
+A real-time, Family-Feud-style live game show for Sustainicity. One host runs the show from a laptop/projector and up to **40 participants** join from their phones using a 5-character room code.
 
 ## What this version does
 
@@ -9,7 +10,7 @@ A real-time, sustainability-themed game show for Sustainicity. One host runs the
 - Questions are not repeated until the current shuffled question cycle has been used. The next cycle is shuffled again and avoids repeating the immediately previous question.
 - The first participant to buzz gets the answer turn. If their answer is marked wrong, the buzzer reopens for participants who have not yet answered that question.
 - A participant gets one attempt per question. A correct answer ends the round.
-- The host judges the typed response by clicking the matching unrevealed answer, or marks it wrong. A 20-second answer timer and 30-second host-review timer prevent a turn from hanging indefinitely.
+- The host judges the typed response by clicking the matching unrevealed answer, or marks it wrong. The answer timer starts when a participant wins the buzzer and gives them 30 seconds to submit. A separate 30-second host-review timer prevents the host decision from hanging indefinitely.
 - Correct answers award their listed board points: **50 / 40 / 30 / 20 / 10 / 5**.
 - Wrong answers deduct 10 points, but scores cannot fall below zero.
 - Live roster and leaderboard update across connected screens.
