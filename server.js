@@ -16,6 +16,8 @@ const HOST_GRACE_MS = 10 * 60 * 1000;
 const rooms = new Map();
 const BASE_POINTS = [50, 40, 30, 20, 10, 5];
 const WRONG_PENALTY = 10;
+const ANSWER_TIME_MS = 30 * 1000;
+const HOST_REVIEW_TIME_MS = 30 * 1000;
 
 app.disable('x-powered-by');
 app.use(express.static(path.join(__dirname, 'public'), { maxAge: process.env.NODE_ENV === 'production' ? '1h' : 0 }));
@@ -47,7 +49,7 @@ function getRoom(socket, code) {
   return room || null;
 }
 function cancelTimer(room) { if (room.cleanupTimer) clearTimeout(room.cleanupTimer); room.cleanupTimer = null; }
-function clearTurnTimer(room) { if (room.turnTimer) clearTimeout(room.turnTimer); room.turnTimer = null; }
+function clearTurnTimer(room) { if (room.turnTimer) clearTimeout(room.turnTimer); room.turnTimer = null; room.turnDeadline = null; }
 function destroyRoom(room, message) {
   cancelTimer(room);
   clearTurnTimer(room);
@@ -96,7 +98,9 @@ function publicRoom(room) {
     submittedAnswer: room.submittedAnswer,
     lastResult: room.lastResult,
     winnerId: room.winnerId,
-    winnerName: room.winnerName
+    winnerName: room.winnerName,
+    turnDeadline: room.turnDeadline || null,
+    answerTimeLimitSeconds: ANSWER_TIME_MS / 1000
   };
 }
 function broadcast(room, refreshExpiry = true) {
@@ -106,6 +110,7 @@ function broadcast(room, refreshExpiry = true) {
 function isHost(socket, room) { return room.hostId === socket.id && socket.data.role === 'host' && socket.data.roomCode === room.code; }
 function isPlayer(socket, room) { return room.players.has(socket.id) && socket.data.role === 'player' && socket.data.roomCode === room.code; }
 function resetRound(room, question) {
+  clearTurnTimer(room);
   room.question = question;
   room.lastQuestionId = question.id;
   room.roundNumber += 1;
@@ -150,6 +155,7 @@ function markCurrentAnswerWrong(room, timedOut = false) {
 function startTurnTimer(room, delay, expectedStatus) {
   clearTurnTimer(room);
   const playerId = room.answererId;
+  room.turnDeadline = Date.now() + delay;
   room.turnTimer = setTimeout(() => {
     if (!rooms.has(room.code) || room.answererId !== playerId || room.status !== expectedStatus) return;
     if (expectedStatus === 'answering') room.triedPlayerIds.add(playerId);
@@ -182,7 +188,7 @@ io.on('connection', socket => {
       code, hostId: socket.id, hostToken: crypto.randomBytes(24).toString('hex'), players: new Map(), disconnectedPlayers: new Map(), status: 'lobby', question: null,
       revealed: [], buzzWinnerId: null, answererId: null, triedPlayerIds: new Set(),
       submittedAnswer: null, lastResult: null, winnerId: null, winnerName: null,
-      roundNumber: 0, questionBag: shuffledQuestionIds(), lastQuestionId: null, cleanupTimer: null, turnTimer: null
+      roundNumber: 0, questionBag: shuffledQuestionIds(), lastQuestionId: null, cleanupTimer: null, turnTimer: null, turnDeadline: null
     };
     rooms.set(code, room);
     socket.join(code);
@@ -224,8 +230,11 @@ io.on('connection', socket => {
     room.status = room.statusBeforeHostDisconnect || 'lobby';
     delete room.statusBeforeHostDisconnect;
     cancelTimer(room); scheduleCleanup(room, ROOM_TTL_MS);
-    if (room.status === 'answering') startTurnTimer(room, 20000, 'answering');
-    if (room.status === 'host-review') startTurnTimer(room, 30000, 'host-review');
+    if (room.status === 'answering' || room.status === 'host-review') {
+      const remaining = room.pausedTurnRemainingMs || Math.max(1, (room.turnDeadline || Date.now()) - Date.now());
+      delete room.pausedTurnRemainingMs;
+      startTurnTimer(room, remaining, room.status);
+    }
     socket.emit('host:created', { code: room.code, questions, hostToken: room.hostToken, reconnected: true });
     if (room.question) socket.emit('host:round', { question: room.question });
     broadcast(room);
@@ -241,6 +250,8 @@ io.on('connection', socket => {
     clearTimeout(entry.timer);
     room.disconnectedPlayers.delete(payload.token);
     const oldId = entry.oldId, player = entry.player;
+    const wasAnswerer = room.answererId === oldId;
+    const remainingTurnMs = room.turnDeadline ? Math.max(1, room.turnDeadline - Date.now()) : ANSWER_TIME_MS;
     if (room.triedPlayerIds.has(oldId)) { room.triedPlayerIds.delete(oldId); room.triedPlayerIds.add(socket.id); }
     if (room.answererId === oldId) room.answererId = socket.id;
     if (room.buzzWinnerId === oldId) room.buzzWinnerId = socket.id;
@@ -249,6 +260,7 @@ io.on('connection', socket => {
     socket.join(room.code); socket.data.role = 'player'; socket.data.roomCode = room.code;
     cancelTimer(room); scheduleCleanup(room, ROOM_TTL_MS);
     socket.emit('player:joined', { code: room.code, playerId: socket.id, token: player.token, reconnected: true });
+    if (wasAnswerer && room.status === 'answering') startTurnTimer(room, remainingTurnMs, 'answering');
     broadcast(room);
   });
 
@@ -286,7 +298,7 @@ io.on('connection', socket => {
     room.buzzWinnerId = socket.id;
     room.answererId = socket.id;
     room.status = 'answering';
-    startTurnTimer(room, 20000, 'answering');
+    startTurnTimer(room, ANSWER_TIME_MS, 'answering');
     room.lastResult = { type: 'buzz', playerId: socket.id, name: room.players.get(socket.id).name };
     broadcast(room);
   });
@@ -303,7 +315,7 @@ io.on('connection', socket => {
     room.submittedAnswer = answer;
     room.triedPlayerIds.add(socket.id);
     room.status = 'host-review';
-    startTurnTimer(room, 30000, 'host-review');
+    startTurnTimer(room, HOST_REVIEW_TIME_MS, 'host-review');
     broadcast(room);
   });
 
@@ -355,6 +367,7 @@ io.on('connection', socket => {
     if (!room) return;
     if (room.hostId === socket.id) {
       room.statusBeforeHostDisconnect = room.status;
+      if (['answering', 'host-review'].includes(room.status)) room.pausedTurnRemainingMs = Math.max(1, (room.turnDeadline || Date.now()) - Date.now());
       clearTurnTimer(room);
       room.status = 'host-disconnected';
       io.to(code).emit('host:disconnected');
