@@ -1,7 +1,6 @@
-services:
-  - type: web
-    name: sustaini-feud
-    runtime: node
-    buildCommand: npm install
-    startCommand: npm start
-    autoDeploy: true
+50 points: Pasta/Pizza
+40 points: sushi
+30 points: indian food
+20 points: dumplings/momo
+10: dessert
+5: beverages
