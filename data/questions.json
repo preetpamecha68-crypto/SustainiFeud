@@ -1,35 +1,603 @@
 [
-  {"id":1,"question":"Name a company you associate with an environmental scandal.","answers":[{"text":"BP","points":50,"aliases":["British Petroleum"]},{"text":"Volkswagen","points":40,"aliases":["VW"]},{"text":"ExxonMobil","points":30,"aliases":["Exxon"]},{"text":"Shell","points":20,"aliases":["Royal Dutch Shell"]},{"text":"Coca-Cola","points":10,"aliases":["Coke"]},{"text":"Boeing","points":5,"aliases":[]}]},
-  {"id":2,"question":"Name a way a company can reduce its carbon footprint.","answers":[{"text":"Use renewable energy","points":50,"aliases":["renewable energy","solar","wind power"]},{"text":"Reduce energy consumption","points":40,"aliases":["save energy","energy efficiency"]},{"text":"Use electric vehicles","points":30,"aliases":["EVs","electric cars","electric vehicles"]},{"text":"Reduce waste","points":20,"aliases":["waste reduction"]},{"text":"Improve public transport","points":10,"aliases":["public transportation"]},{"text":"Plant trees","points":5,"aliases":["tree planting","afforestation"]}]},
-  {"id":3,"question":"Name a word you see on a product that makes it sound eco-friendly.","answers":[{"text":"Eco-friendly","points":50,"aliases":["eco friendly","eco"]},{"text":"Natural","points":40,"aliases":[]},{"text":"Organic","points":30,"aliases":[]},{"text":"Sustainable","points":20,"aliases":["sustainability"]},{"text":"Green","points":10,"aliases":[]},{"text":"Biodegradable","points":5,"aliases":["bio degradable"]}]},
-  {"id":4,"question":"Name something an investor checks before investing in a company.","answers":[{"text":"Profitability","points":50,"aliases":["profits","profit"]},{"text":"Financial performance","points":40,"aliases":["financials","financial results"]},{"text":"Management quality","points":30,"aliases":["management"]},{"text":"Market position","points":20,"aliases":["market share"]},{"text":"ESG performance","points":10,"aliases":["ESG"]},{"text":"Growth potential","points":5,"aliases":["future growth","growth"]}]},
-  {"id":5,"question":"Name a way a company can treat its workers well.","answers":[{"text":"Fair wages","points":50,"aliases":["fair pay","good wages"]},{"text":"Safe workplace","points":40,"aliases":["safe working conditions","workplace safety"]},{"text":"Work-life balance","points":30,"aliases":["work life balance"]},{"text":"Benefits","points":20,"aliases":["employee benefits"]},{"text":"Career growth","points":10,"aliases":["career development"]},{"text":"Equal treatment","points":5,"aliases":["equality","equal opportunity"]}]},
-  {"id":6,"question":"Name a reason a company's board might fire a CEO.","answers":[{"text":"Poor performance","points":50,"aliases":["bad performance"]},{"text":"Scandal","points":40,"aliases":["scandal"]},{"text":"Ethical misconduct","points":30,"aliases":["misconduct","unethical conduct"]},{"text":"Financial losses","points":20,"aliases":["losses","financial loss"]},{"text":"Poor leadership","points":10,"aliases":["bad leadership"]},{"text":"Legal/regulatory issues","points":5,"aliases":["legal issues","regulatory issues"]}]},
-  {"id":7,"question":"Name a source of greenhouse gas emissions.","answers":[{"text":"Transportation","points":50,"aliases":["transport","cars","vehicles"]},{"text":"Electricity generation","points":40,"aliases":["power generation","electricity"]},{"text":"Factories","points":30,"aliases":["industry","industrial"]},{"text":"Agriculture","points":20,"aliases":["farming"]},{"text":"Buildings","points":10,"aliases":["construction"]},{"text":"Deforestation","points":5,"aliases":["forest loss"]}]},
-  {"id":8,"question":"Name something a company might do that would get it accused of greenwashing.","answers":[{"text":"False environmental claims","points":50,"aliases":["false eco claims","false claims"]},{"text":"Exaggerated sustainability claims","points":40,"aliases":["exaggerated claims"]},{"text":"Misleading labels","points":30,"aliases":["misleading eco labels","misleading labels"]},{"text":"Hiding pollution","points":20,"aliases":["hiding emissions","hiding environmental impact"]},{"text":"Vague eco claims","points":10,"aliases":["vague sustainability claims","vague claims"]},{"text":"Fake certifications","points":5,"aliases":["fake certification"]}]},
-  {"id":9,"question":"Name something a company might change after receiving negative public attention.","answers":[{"text":"Change leadership","points":50,"aliases":["leadership change"]},{"text":"Issue an apology","points":40,"aliases":["apologize","public apology"]},{"text":"Change policies","points":30,"aliases":["policy changes"]},{"text":"Improve transparency","points":20,"aliases":["transparency"]},{"text":"Launch corrective action","points":10,"aliases":["corrective measures","corrective action"]},{"text":"Change products/practices","points":5,"aliases":["change products","change practices"]}]},
-  {"id":10,"question":"Name an ESG issue that could affect a company's stock price.","answers":[{"text":"Climate risk","points":50,"aliases":["climate change"]},{"text":"Labour issues","points":40,"aliases":["labor issues","worker issues"]},{"text":"Governance scandal","points":30,"aliases":["governance issues","governance"]},{"text":"Greenwashing","points":20,"aliases":["green washing"]},{"text":"Regulatory action","points":10,"aliases":["regulation","regulatory issues"]},{"text":"Diversity/HR controversy","points":5,"aliases":["diversity controversy","HR controversy"]}]},
-  {"id":11,"question":"Name something a company can do to improve conditions for factory workers.","answers":[{"text":"Fair wages","points":50,"aliases":["fair pay"]},{"text":"Safe working conditions","points":40,"aliases":["workplace safety","safe workplace"]},{"text":"Reasonable working hours","points":30,"aliases":["reasonable hours","fair working hours"]},{"text":"Health benefits","points":20,"aliases":["healthcare","medical benefits"]},{"text":"Worker training","points":10,"aliases":["training"]},{"text":"No forced/child labour","points":5,"aliases":["no forced labor","no child labor","no child labour"]}]},
-  {"id":12,"question":"Name a company department that could be involved in ESG decisions.","answers":[{"text":"HR","points":50,"aliases":["human resources"]},{"text":"Finance","points":40,"aliases":["financial department"]},{"text":"Operations","points":30,"aliases":["operations team"]},{"text":"Marketing","points":20,"aliases":[]},{"text":"Legal/Compliance","points":10,"aliases":["legal","compliance"]},{"text":"Supply Chain/Procurement","points":5,"aliases":["supply chain","procurement"]}]},
-  {"id":13,"question":"Name something you would expect to see in a company's sustainability report.","answers":[{"text":"Carbon emissions","points":50,"aliases":["emissions","carbon footprint"]},{"text":"Water usage","points":40,"aliases":["water consumption"]},{"text":"Waste data","points":30,"aliases":["waste"]},{"text":"Employee statistics","points":20,"aliases":["employee data","employee stats"]},{"text":"ESG targets","points":10,"aliases":["ESG goals","targets"]},{"text":"Sustainability initiatives","points":5,"aliases":["sustainability programs","initiatives"]}]},
-  {"id":14,"question":"Name something companies can do to reduce their carbon emissions.","answers":[{"text":"Renewable energy","points":50,"aliases":["renewable power","solar","wind"]},{"text":"Energy efficiency","points":40,"aliases":["energy saving","reduce energy"]},{"text":"Electric vehicles","points":30,"aliases":["EVs","electric cars"]},{"text":"Public transport","points":20,"aliases":["public transportation"]},{"text":"Carbon offsets","points":10,"aliases":["offsets"]},{"text":"Reducing production emissions","points":5,"aliases":["reduce production emissions","production emissions"]}]},
-  {"id":15,"question":"Name a reason a company might face government or regulatory action.","answers":[{"text":"Environmental violations","points":50,"aliases":["environmental violation","pollution"]},{"text":"Tax issues","points":40,"aliases":["tax problems"]},{"text":"Labour law violations","points":30,"aliases":["labor law violations","labour violations"]},{"text":"Consumer protection violations","points":20,"aliases":["consumer violations"]},{"text":"Fraud","points":10,"aliases":[]},{"text":"Safety violations","points":5,"aliases":["safety violation"]}]},
-  {"id":16,"question":"Name something that could make customers lose trust in a company.","answers":[{"text":"Poor product quality","points":50,"aliases":["bad product quality","poor quality"]},{"text":"Scandal","points":40,"aliases":["scandal"]},{"text":"False advertising","points":30,"aliases":["misleading advertising"]},{"text":"Poor customer service","points":20,"aliases":["bad customer service"]},{"text":"Unethical practices","points":10,"aliases":["unethical behavior","unethical behaviour"]},{"text":"Data/privacy issues","points":5,"aliases":["data breach","privacy issues"]}]},
-  {"id":17,"question":"Name something a company can do to improve transparency.","answers":[{"text":"Publish ESG reports","points":50,"aliases":["ESG reporting","publish reports"]},{"text":"Disclose emissions","points":40,"aliases":["emissions disclosure"]},{"text":"Clear product information","points":30,"aliases":["clear information"]},{"text":"Independent audits","points":20,"aliases":["external audits"]},{"text":"Transparent policies","points":10,"aliases":["clear policies"]},{"text":"Report progress and failures","points":5,"aliases":["report progress","report failures"]}]},
-  {"id":18,"question":"Name a social issue that companies are increasingly expected to address.","answers":[{"text":"Diversity and inclusion","points":50,"aliases":["DEI","diversity"]},{"text":"Fair wages","points":40,"aliases":["fair pay"]},{"text":"Human rights","points":30,"aliases":["rights"]},{"text":"Mental health","points":20,"aliases":["mental wellbeing","wellbeing"]},{"text":"Community development","points":10,"aliases":["community"]},{"text":"Gender equality","points":5,"aliases":["gender equity"]}]},
-  {"id":19,"question":"Name something that can make a company's supply chain more sustainable.","answers":[{"text":"Local sourcing","points":50,"aliases":["source locally"]},{"text":"Ethical suppliers","points":40,"aliases":["ethical sourcing","ethical supplier"]},{"text":"Low-carbon transport","points":30,"aliases":["low carbon transportation","green transport"]},{"text":"Sustainable materials","points":20,"aliases":["eco materials"]},{"text":"Supplier audits","points":10,"aliases":["supplier audit"]},{"text":"Reducing packaging","points":5,"aliases":["less packaging","reduce packaging"]}]},
-  {"id":20,"question":"Name something a company can do to reduce water consumption.","answers":[{"text":"Fix leaks","points":50,"aliases":["repair leaks","leak repair"]},{"text":"Water-efficient equipment","points":40,"aliases":["efficient equipment","water efficient equipment"]},{"text":"Rainwater harvesting","points":30,"aliases":["rainwater collection"]},{"text":"Recycling wastewater","points":20,"aliases":["wastewater recycling","reuse wastewater"]},{"text":"Reduce water-intensive processes","points":10,"aliases":["reduce water use in processes"]},{"text":"Monitor water usage","points":5,"aliases":["track water use","water monitoring"]}]},
-  {"id":21,"question":"Name a type of renewable energy a company might invest in.","answers":[{"text":"Solar","points":50,"aliases":["solar energy","solar power"]},{"text":"Wind","points":40,"aliases":["wind energy","wind power"]},{"text":"Hydropower","points":30,"aliases":["hydro","hydroelectric"]},{"text":"Geothermal","points":20,"aliases":["geothermal energy"]},{"text":"Biomass","points":10,"aliases":["bioenergy"]},{"text":"Green hydrogen","points":5,"aliases":["hydrogen"]}]},
-  {"id":22,"question":"Name something investors may look at besides a company's profits.","answers":[{"text":"ESG performance","points":50,"aliases":["ESG"]},{"text":"Cash flow","points":40,"aliases":["cashflow"]},{"text":"Debt levels","points":30,"aliases":["debt","debt ratio"]},{"text":"Management quality","points":20,"aliases":["management"]},{"text":"Market share","points":10,"aliases":["market position"]},{"text":"Future growth","points":5,"aliases":["growth potential","growth"]}]},
-  {"id":23,"question":"Name something a company can do to improve workplace diversity.","answers":[{"text":"Inclusive hiring","points":50,"aliases":["diverse hiring","inclusive recruitment"]},{"text":"Equal pay","points":40,"aliases":["equal wages"]},{"text":"Diversity training","points":30,"aliases":["DEI training"]},{"text":"Anti-discrimination policies","points":20,"aliases":["anti discrimination","anti-discrimination"]},{"text":"Leadership opportunities","points":10,"aliases":["leadership access"]},{"text":"Accessible workplaces","points":5,"aliases":["accessibility","accessible workplace"]}]},
-  {"id":24,"question":"Name a stakeholder a company must consider when making an ESG decision.","answers":[{"text":"Employees","points":50,"aliases":["workers","staff"]},{"text":"Customers","points":40,"aliases":["consumers"]},{"text":"Investors","points":30,"aliases":["shareholders"]},{"text":"Government","points":20,"aliases":["regulators"]},{"text":"Local communities","points":10,"aliases":["community"]},{"text":"Suppliers","points":5,"aliases":["vendors"]}]},
-  {"id":25,"question":"Name something that can cause a company to be accused of greenwashing.","answers":[{"text":"Misleading eco labels","points":50,"aliases":["misleading labels","eco labels"]},{"text":"Unverified claims","points":40,"aliases":["unverified environmental claims"]},{"text":"Cherry-picking data","points":30,"aliases":["cherry picked data","selective data"]},{"text":"Vague sustainability language","points":20,"aliases":["vague eco language","vague claims"]},{"text":"False advertising","points":10,"aliases":["false ads"]},{"text":"Hiding negative impacts","points":5,"aliases":["hiding impacts","hiding environmental impacts"]}]},
-  {"id":26,"question":"Name something companies do to reduce waste.","answers":[{"text":"Recycling","points":50,"aliases":["recycle"]},{"text":"Reusable packaging","points":40,"aliases":["reusable packs","reusable containers"]},{"text":"Reducing packaging","points":30,"aliases":["less packaging"]},{"text":"Composting","points":20,"aliases":["compost"]},{"text":"Reusing materials","points":10,"aliases":["reuse materials","reuse"]},{"text":"Digital documentation","points":5,"aliases":["go digital","digital documents"]}]},
-  {"id":27,"question":"Name an industry you think faces major environmental challenges.","answers":[{"text":"Oil and gas","points":50,"aliases":["oil","petroleum","fossil fuels"]},{"text":"Fashion","points":40,"aliases":["clothing","textiles"]},{"text":"Airlines","points":30,"aliases":["aviation","airline industry"]},{"text":"Automotive","points":20,"aliases":["cars","automobile"]},{"text":"Construction","points":10,"aliases":["building"]},{"text":"Food and agriculture","points":5,"aliases":["agriculture","food industry","farming"]}]},
-  {"id":28,"question":"Name something consumers look for when deciding whether a company is ethical.","answers":[{"text":"Fair wages","points":50,"aliases":["fair pay"]},{"text":"Environmental impact","points":40,"aliases":["eco impact","environmental record"]},{"text":"Product safety","points":30,"aliases":["safe products"]},{"text":"Ethical sourcing","points":20,"aliases":["ethical suppliers","responsible sourcing"]},{"text":"Diversity and inclusion","points":10,"aliases":["DEI","diversity"]},{"text":"Animal welfare","points":5,"aliases":["animal rights"]}]},
-  {"id":29,"question":"Name something a company can do to improve employee wellbeing.","answers":[{"text":"Flexible work","points":50,"aliases":["flexible working","flexible hours","hybrid work"]},{"text":"Mental health support","points":40,"aliases":["mental health"]},{"text":"Fair pay","points":30,"aliases":["fair wages"]},{"text":"Paid leave","points":20,"aliases":["paid time off","PTO"]},{"text":"Healthy workplace","points":10,"aliases":["healthy work environment"]},{"text":"Fitness/wellness programs","points":5,"aliases":["wellness programs","fitness programs"]}]},
-  {"id":30,"question":"Name something employees want from their employer besides a salary.","answers":[{"text":"Career growth","points":50,"aliases":["career development","growth"]},{"text":"Work-life balance","points":40,"aliases":["work life balance"]},{"text":"Job security","points":30,"aliases":["security"]},{"text":"Recognition","points":20,"aliases":["employee recognition"]},{"text":"Flexible work","points":10,"aliases":["flexibility","flexible hours"]},{"text":"Good workplace culture","points":5,"aliases":["work culture","company culture"]}]},
-  {"id":31,"question":"Name something that can damage a company's reputation overnight.","answers":[{"text":"Scandal","points":50,"aliases":["corporate scandal"]},{"text":"Product failure","points":40,"aliases":["product fail","product defect"]},{"text":"Social media backlash","points":30,"aliases":["social media controversy","online backlash"]},{"text":"Environmental damage","points":20,"aliases":["pollution","environmental harm"]},{"text":"Employee mistreatment","points":10,"aliases":["worker mistreatment","employee abuse"]},{"text":"Data breach","points":5,"aliases":["cyber breach","hack"]}]},
-  {"id":32,"question":"Name a sustainability practice you would expect from a large company.","answers":[{"text":"Renewable energy","points":50,"aliases":["renewable power"]},{"text":"Waste reduction","points":40,"aliases":["reduce waste"]},{"text":"Carbon reduction","points":30,"aliases":["reduce carbon","emissions reduction"]},{"text":"Ethical sourcing","points":20,"aliases":["ethical suppliers"]},{"text":"Sustainable packaging","points":10,"aliases":["eco packaging"]},{"text":"Water conservation","points":5,"aliases":["save water","water saving"]}]},
-  {"id":33,"question":"Name something a company can do to become more environmentally friendly.","answers":[{"text":"Use renewable energy","points":50,"aliases":["renewable energy","solar","wind"]},{"text":"Reduce plastic use","points":40,"aliases":["less plastic","reduce plastic"]},{"text":"Recycle more","points":30,"aliases":["recycling","recycle"]},{"text":"Reduce emissions","points":20,"aliases":["lower emissions","cut emissions"]},{"text":"Save water","points":10,"aliases":["water conservation","reduce water"]},{"text":"Use sustainable materials","points":5,"aliases":["eco materials","sustainable material"]}]}
+  {
+    "id": 1,
+    "question": "Name something people do immediately after waking up.",
+    "answers": [
+      {
+        "text": "Check their phones",
+        "points": 50,
+        "aliases": [
+          "check phone",
+          "check their phone",
+          "look at phone",
+          "scroll phone"
+        ]
+      },
+      {
+        "text": "Exercise",
+        "points": 40,
+        "aliases": [
+          "work out",
+          "workout",
+          "exercise"
+        ]
+      },
+      {
+        "text": "Brush their teeth",
+        "points": 30,
+        "aliases": [
+          "brush teeth",
+          "brushing teeth"
+        ]
+      },
+      {
+        "text": "Tea/coffee/breakfast",
+        "points": 20,
+        "aliases": [
+          "tea",
+          "coffee",
+          "breakfast",
+          "have tea",
+          "have coffee",
+          "eat breakfast"
+        ]
+      },
+      {
+        "text": "Bath",
+        "points": 10,
+        "aliases": [
+          "shower",
+          "take a bath",
+          "take a shower"
+        ]
+      },
+      {
+        "text": "Sleep again",
+        "points": 5,
+        "aliases": [
+          "go back to sleep",
+          "sleep again",
+          "snooze"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "question": "Name a food everyone loves ordering at a restaurant.",
+    "answers": [
+      {
+        "text": "Pasta/Pizza",
+        "points": 50,
+        "aliases": [
+          "pasta",
+          "pizza"
+        ]
+      },
+      {
+        "text": "Sushi",
+        "points": 40,
+        "aliases": [
+          "sushi"
+        ]
+      },
+      {
+        "text": "Indian food",
+        "points": 30,
+        "aliases": [
+          "indian cuisine",
+          "curry",
+          "indian dishes"
+        ]
+      },
+      {
+        "text": "Dumplings/Momo",
+        "points": 20,
+        "aliases": [
+          "dumplings",
+          "momo",
+          "momos"
+        ]
+      },
+      {
+        "text": "Dessert",
+        "points": 10,
+        "aliases": [
+          "desserts",
+          "ice cream",
+          "sweet dish"
+        ]
+      },
+      {
+        "text": "Beverages",
+        "points": 5,
+        "aliases": [
+          "drinks",
+          "beverage",
+          "mocktail",
+          "soft drinks"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "question": "Name something people forget to carry when leaving home.",
+    "answers": [
+      {
+        "text": "ID cards",
+        "points": 50,
+        "aliases": [
+          "id card",
+          "identity card",
+          "college id",
+          "id"
+        ]
+      },
+      {
+        "text": "Books",
+        "points": 40,
+        "aliases": [
+          "book",
+          "notebooks",
+          "textbooks"
+        ]
+      },
+      {
+        "text": "Headphones/charger/tech",
+        "points": 30,
+        "aliases": [
+          "headphones",
+          "earphones",
+          "charger",
+          "tech items"
+        ]
+      },
+      {
+        "text": "Keys",
+        "points": 20,
+        "aliases": [
+          "key",
+          "house keys"
+        ]
+      },
+      {
+        "text": "Wallet/money",
+        "points": 10,
+        "aliases": [
+          "wallet",
+          "money",
+          "cash"
+        ]
+      },
+      {
+        "text": "Water bottle",
+        "points": 5,
+        "aliases": [
+          "bottle",
+          "water"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "question": "Name a popular excuse students give for coming late to college.",
+    "answers": [
+      {
+        "text": "Traffic/train delay",
+        "points": 50,
+        "aliases": [
+          "traffic",
+          "train delay",
+          "local train",
+          "train late",
+          "traffic jam"
+        ]
+      },
+      {
+        "text": "Vehicle broke down",
+        "points": 40,
+        "aliases": [
+          "car broke down",
+          "bike broke down",
+          "vehicle problem",
+          "car problem"
+        ]
+      },
+      {
+        "text": "Woke up late",
+        "points": 30,
+        "aliases": [
+          "overslept",
+          "alarm didn't ring",
+          "alarm did not ring"
+        ]
+      },
+      {
+        "text": "Lift delay",
+        "points": 20,
+        "aliases": [
+          "elevator delay",
+          "lift was slow"
+        ]
+      },
+      {
+        "text": "Crowded stairs",
+        "points": 10,
+        "aliases": [
+          "crowded staircase",
+          "stairs were crowded"
+        ]
+      },
+      {
+        "text": "Stopped for ID card",
+        "points": 5,
+        "aliases": [
+          "forgot id card",
+          "went back for id card",
+          "stopped to get id card"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "question": "Name something people do when they're bored in class.",
+    "answers": [
+      {
+        "text": "Check their phones",
+        "points": 50,
+        "aliases": [
+          "check phone",
+          "scroll phone",
+          "use their phone"
+        ]
+      },
+      {
+        "text": "Sleep",
+        "points": 40,
+        "aliases": [
+          "sleeping",
+          "take a nap",
+          "nap"
+        ]
+      },
+      {
+        "text": "Gossip/talk to friends",
+        "points": 30,
+        "aliases": [
+          "gossip",
+          "talk to friends",
+          "chat with friends"
+        ]
+      },
+      {
+        "text": "Play mini games",
+        "points": 20,
+        "aliases": [
+          "games",
+          "play games",
+          "mobile games"
+        ]
+      },
+      {
+        "text": "Go to the washroom",
+        "points": 10,
+        "aliases": [
+          "washroom",
+          "bathroom",
+          "go to bathroom"
+        ]
+      },
+      {
+        "text": "Doodle",
+        "points": 5,
+        "aliases": [
+          "draw",
+          "drawing",
+          "scribble"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "question": "Name a household item that people fight over.",
+    "answers": [
+      {
+        "text": "TV remote",
+        "points": 50,
+        "aliases": [
+          "remote",
+          "television remote"
+        ]
+      },
+      {
+        "text": "Phone chargers",
+        "points": 40,
+        "aliases": [
+          "charger",
+          "chargers"
+        ]
+      },
+      {
+        "text": "AC control",
+        "points": 30,
+        "aliases": [
+          "ac remote",
+          "air conditioner remote",
+          "air conditioning"
+        ]
+      },
+      {
+        "text": "Washroom",
+        "points": 20,
+        "aliases": [
+          "bathroom",
+          "toilet"
+        ]
+      },
+      {
+        "text": "Beds/blankets",
+        "points": 10,
+        "aliases": [
+          "bed",
+          "blanket",
+          "beds",
+          "blankets"
+        ]
+      },
+      {
+        "text": "Sofa seat",
+        "points": 5,
+        "aliases": [
+          "sofa",
+          "couch",
+          "best seat on sofa"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "question": "Name something people usually take pictures of.",
+    "answers": [
+      {
+        "text": "Food",
+        "points": 50,
+        "aliases": [
+          "meal",
+          "their food",
+          "dishes"
+        ]
+      },
+      {
+        "text": "Themselves",
+        "points": 40,
+        "aliases": [
+          "selfies",
+          "selfie",
+          "self portrait"
+        ]
+      },
+      {
+        "text": "Family",
+        "points": 30,
+        "aliases": [
+          "family members",
+          "relatives"
+        ]
+      },
+      {
+        "text": "Studies/notes",
+        "points": 20,
+        "aliases": [
+          "notes",
+          "study notes",
+          "books"
+        ]
+      },
+      {
+        "text": "Scenery",
+        "points": 10,
+        "aliases": [
+          "landscape",
+          "nature",
+          "view"
+        ]
+      },
+      {
+        "text": "Cafes",
+        "points": 5,
+        "aliases": [
+          "cafe",
+          "coffee shops",
+          "restaurants"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "question": "Name a reason someone might cancel plans at the last minute.",
+    "answers": [
+      {
+        "text": "Parents' issues",
+        "points": 50,
+        "aliases": [
+          "parents said no",
+          "family issue",
+          "family problems",
+          "parents won't allow"
+        ]
+      },
+      {
+        "text": "Traffic/train issues",
+        "points": 40,
+        "aliases": [
+          "traffic",
+          "train delay",
+          "missed train",
+          "transport issue"
+        ]
+      },
+      {
+        "text": "Health issues",
+        "points": 30,
+        "aliases": [
+          "sick",
+          "illness",
+          "not feeling well"
+        ]
+      },
+      {
+        "text": "No money",
+        "points": 20,
+        "aliases": [
+          "broke",
+          "can't afford it",
+          "cant afford it",
+          "out of money"
+        ]
+      },
+      {
+        "text": "Fake friends",
+        "points": 10,
+        "aliases": [
+          "friend cancelled",
+          "friends bailed",
+          "friend bailed"
+        ]
+      },
+      {
+        "text": "Vehicle broke down",
+        "points": 5,
+        "aliases": [
+          "car broke down",
+          "bike broke down",
+          "vehicle problem"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "question": "Name something you would find in almost every college student's bag.",
+    "answers": [
+      {
+        "text": "Books/pens",
+        "points": 50,
+        "aliases": [
+          "books",
+          "pens",
+          "notebooks",
+          "stationery"
+        ]
+      },
+      {
+        "text": "Laptop/iPad",
+        "points": 40,
+        "aliases": [
+          "laptop",
+          "ipad",
+          "tablet"
+        ]
+      },
+      {
+        "text": "Water bottle",
+        "points": 30,
+        "aliases": [
+          "bottle",
+          "water"
+        ]
+      },
+      {
+        "text": "Makeup",
+        "points": 20,
+        "aliases": [
+          "make up",
+          "cosmetics",
+          "lipstick"
+        ]
+      },
+      {
+        "text": "Food",
+        "points": 10,
+        "aliases": [
+          "snacks",
+          "lunch",
+          "food items"
+        ]
+      },
+      {
+        "text": "Money/keys",
+        "points": 5,
+        "aliases": [
+          "money",
+          "cash",
+          "keys",
+          "wallet"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "question": "Name a popular midnight snack.",
+    "answers": [
+      {
+        "text": "Maggi",
+        "points": 50,
+        "aliases": [
+          "instant noodles",
+          "noodles"
+        ]
+      },
+      {
+        "text": "Popcorn",
+        "points": 40,
+        "aliases": [
+          "pop corn"
+        ]
+      },
+      {
+        "text": "Chips/Nachos",
+        "points": 30,
+        "aliases": [
+          "chips",
+          "nachos",
+          "crisps"
+        ]
+      },
+      {
+        "text": "Garlic bread/Pizza",
+        "points": 20,
+        "aliases": [
+          "garlic bread",
+          "pizza"
+        ]
+      },
+      {
+        "text": "Dessert",
+        "points": 10,
+        "aliases": [
+          "ice cream",
+          "chocolate",
+          "sweets"
+        ]
+      },
+      {
+        "text": "Beverages",
+        "points": 5,
+        "aliases": [
+          "drinks",
+          "tea",
+          "coffee",
+          "soft drinks",
+          "milkshake"
+        ]
+      }
+    ]
+  }
 ]
